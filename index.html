@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+  </head>
+  <body>
+    <div class="w-75 mx-auto my-5 py-4">
+      <div class="form-floating mb-4">
+        <input
+          type="text"
+          oninput="validateInputs(this)"
+          class="form-control"
+          id="productName"
+          placeholder="productName"
+        />
+        <div class="alert alert-danger p-2 mt-1 d-none">Name must contain 3 chars first must be capital</div>
+        <label for="productName">Name</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input
+          oninput="validateInputs(this)"
+          type="number"
+          class="form-control"
+          id="productPrice"
+          placeholder="productPrice"
+        />
+        <div class="alert alert-danger p-2 mt-1 d-none">price must be between 1 - 9999</div>
+        <label for="productPrice">Price</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input
+          oninput="validateInputs(this)"
+          list="demo"
+          type="text"
+          class="form-control"
+          id="productCategory"
+          placeholder="productCategory"
+        />
+        <div class="alert alert-danger p-2 mt-1 d-none">Category shoud on of (tv, screen, mobile, labtop)</div>
+        <label for="productCategory">Category</label>
+
+        <datalist id="demo">
+          <option value="TV"></option>
+          <option value="Screen"></option>
+          <option value="Mobile"></option>
+          <option value="Labtop"></option>
+        </datalist>
+      </div>
+      <div class="form-floating mb-4">
+        <textarea
+          oninput="validateInputs(this)"
+          type="text"
+          class="form-control"
+          id="productDescription"
+          placeholder="productDesciption"
+        ></textarea>
+        <div class="alert alert-danger p-2 mt-1 d-none"> you should less than 20 chars</div>
+        <label for="productDescription">Description</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input
+          accept="image/*"
+          type="file"
+          class="form-control"
+          id="productImage"
+          placeholder="productImage"
+        />
+        <label for="productImage">Upload Image</label>
+      </div>
+      <button id="btnAdd" onclick="addProduct()" class="btn btn-info text-white">
+        Add Product
+      </button>
+      <button id="btnEdit" onclick="updateProduct()"  class="btn btn-warning text-white d-none">
+        Edit Product
+      </button>
+      <input
+        oninput="searchProduct()"
+        id="searchInput"
+        type="text"
+        class="form-control my-4"
+        placeholder="search..."
+      />
+    </div>
+
+    <div class="container my-5">
+      <div id="myRow" class="row"></div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
