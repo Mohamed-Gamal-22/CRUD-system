@@ -28,5 +28,5 @@ Acknowledgements
 Bootstrap - Responsive front-end framework.
 Font Awesome - Icons used in the UI.
 Contact
-For any questions or feedback regarding this project, please email your-email@example.com.
+For any questions or feedback regarding this project, please email mogamall086@gmail.com.
 
